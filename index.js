@@ -20,6 +20,7 @@ mongoose
   .catch((err) => console.log(err));
 app.use("/pins", pinRoute);
 app.use("/users", userRoute);
-app.listen(8800, () => {
+const PORT = process.env.PORT||8800;
+app.listen(PORT, () => {
   console.log("Server Running");
 });
